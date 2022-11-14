@@ -84,7 +84,7 @@ if ($isValid){
               
             } catch (\Throwable $th) {
               if($th->getCode() === 1062) {
-                echo("Email already exist");
+                $emailEx = ("Email already exist");
                 return false;
               }
   
@@ -149,7 +149,7 @@ if ($isValid){
         <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">Email address</label>
          <input type="text" name="email" placeholder="your email address" class="form-control" aria-describedby="emailHelp" id="email">
-          <span class="error"><?php echo $emailErr;?></span>
+          <span class="error"><?php echo $emailEx;?></span>
 
          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
